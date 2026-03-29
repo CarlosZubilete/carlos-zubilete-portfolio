@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #081b29;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background: linear-gradient(180deg, #081b29 0%, #06141f 50%, #02080d 100%);
+}
+
+.section-left,
+.section-right {
+  background: #081b29;
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.08);
+  border-radius: 8px;
+}
+
+.section-left img {
+  max-width: 150px;
+  border-radius: 12px;
+  margin: 20px;
+  object-fit: cover;
+  border: 2px solid #00abf0;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.section-left img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.5);
+}
+
+.section-left h1 {
+  color: #ededed;
+  letter-spacing: 0.3rem;
+  font-family: "Rubik Dirt", serif;
+  font-size: 1.8rem;
+
+  text-shadow:
+    0 0 5px rgba(0, 171, 240, 0.3),
+    0 0 10px rgba(0, 171, 240, 0.2);
+}
+
+.iconos-contenedor a:hover {
+  color: #081b29;
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 171, 240, 0.5);
+}
+
+.badge {
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 171, 240, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 171, 240, 0.05) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+
+  pointer-events: none;
+}

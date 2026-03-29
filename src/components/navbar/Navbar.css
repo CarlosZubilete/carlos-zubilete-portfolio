@@ -1,0 +1,120 @@
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #081b29 0%, #06141f 100%);
+  border-bottom: 1px solid rgba(0, 171, 240, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 171, 240, 0.08);
+}
+
+.navbar-brand {
+  color: #00abf0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  text-shadow: 0 0 15px rgba(0, 171, 240, 0.5);
+}
+
+.navbar-items {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-item {
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.navbar-item:hover {
+  color: #00abf0;
+  background: rgba(0, 171, 240, 0.1);
+  box-shadow: 0 0 10px rgba(0, 171, 240, 0.3);
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00abf0;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after {
+  width: 80%;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggle span {
+  width: 1.5rem;
+  height: 2px;
+  background: #00abf0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(8, 27, 41, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 171, 240, 0.1);
+  }
+
+  .navbar-items.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 171, 240, 0.05);
+  }
+
+  .navbar-item::after {
+    display: none;
+  }
+}
