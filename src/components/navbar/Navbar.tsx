@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,9 +12,9 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: t("navbar.home"), href: "#home" },
+    { label: t("navbar.about"), href: "#about" },
+    { label: t("navbar.contact"), href: "#contact" },
   ];
 
   return (
@@ -38,6 +41,9 @@ export default function Navbar() {
             </a>
           ))}
         </div>
+
+        {/* Language Switcher */}
+        <LanguageSwitcher />
 
         {/* Mobile menu button */}
         <button

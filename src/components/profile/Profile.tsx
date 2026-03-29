@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import profileImg from "../../assets/images/capivara-cold.png";
 import SocialLinks from "./SocialLinks";
 import "./Profile.css";
 
 export default function Profile() {
+  const { t } = useTranslation();
+
   return (
     <div className="profile-container">
       <img
@@ -11,12 +14,12 @@ export default function Profile() {
         className="profile-image"
       />
 
-      <h1 className="profile-name">Hi, I'm Carlos Z.</h1>
+      <h1 className="profile-name">{t("profile.name")}</h1>
 
-      <h3 className="profile-title">Data Developer</h3>
+      <h3 className="profile-title">{t("profile.title")}</h3>
 
       <div className="profile-location">
-        📍 <strong>Argentina | Bs. As.</strong>
+        📍 <strong>{t("hero.location")}</strong>
       </div>
 
       <SocialLinks />

@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I'm Carlos Z.",
+    "subtitle": "Data Developer",
+    "location": "Argentina | Bs. As."
+  },
+  "profile": {
+    "name": "Hi, I'm Carlos Z.",
+    "title": "Data Developer"
+  },
+  "skills": {
+    "whoAmI": "Who am I",
+    "description1": "Student of Programming at Universidad Tecnológica de la Nación (UTN), currently in my final year.",
+    "description2": "Excited to find my first work experience in software.",
+    "sectionTitle": "Skills",
+    "frontend": "Frontend",
+    "languages": "Languages",
+    "tools": "Tools"
+  }
+}

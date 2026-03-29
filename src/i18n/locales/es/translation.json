@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hola, soy Carlos Z.",
+    "subtitle": "Desarrollador de Datos",
+    "location": "Argentina | Bs. As."
+  },
+  "profile": {
+    "name": "Hola, soy Carlos Z.",
+    "title": "Desarrollador de Datos"
+  },
+  "skills": {
+    "whoAmI": "Quién soy",
+    "description1": "Estudiante de Programación en la Universidad Tecnológica de la Nación (UTN), actualmente en mi último año.",
+    "description2": "Emocionado por encontrar mi primera experiencia laboral en software.",
+    "sectionTitle": "Habilidades",
+    "frontend": "Frontend",
+    "languages": "Lenguajes",
+    "tools": "Herramientas"
+  }
+}
