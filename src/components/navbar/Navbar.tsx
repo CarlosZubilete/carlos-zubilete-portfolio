@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { navItems as navItemsData } from "../../data/navItems";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -10,12 +12,6 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  const navItems = [
-    { label: t("navbar.home"), href: "#home" },
-    { label: t("navbar.about"), href: "#about" },
-    { label: t("navbar.contact"), href: "#contact" },
-  ];
 
   return (
     <nav className="navbar">
@@ -35,10 +31,10 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="navbar-items">
-          {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="navbar-item">
-              {item.label}
-            </a>
+          {navItemsData.map((item) => (
+            <Link key={item.labelKey} to={item.href} className="navbar-item">
+              {t(item.labelKey)}
+            </Link>
           ))}
         </div>
 
@@ -50,25 +46,21 @@ export default function Navbar() {
           className={`navbar-toggle ${isOpen ? "active" : ""}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        ></button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
         <div className="navbar-items active">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
+          {navItemsData.map((item) => (
+            <Link
+              key={item.labelKey}
+              to={item.href}
               className="navbar-item"
               onClick={() => setIsOpen(false)}
             >
-              {item.label}
-            </a>
+              {t(item.labelKey)}
+            </Link>
           ))}
         </div>
       )}

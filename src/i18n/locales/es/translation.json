@@ -21,5 +21,14 @@
     "frontend": "Frontend",
     "languages": "Lenguajes",
     "tools": "Herramientas"
+  },
+  "footer": {
+    "letsTalk": "¡Conversemos!",
+    "location": "Tigre - Buenos Aires, Argentina",
+    "thanks": "Gracias por visitar mi portafolio.",
+    "tagline": "De tus sueños al mundo digital, solo nos separa un click.",
+    "quickLinks": "Enlaces Rápidos",
+    "followUs": "Sígueme",
+    "copyright": "Todos los derechos reservados"
   }
 }

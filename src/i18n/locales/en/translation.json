@@ -21,5 +21,14 @@
     "frontend": "Frontend",
     "languages": "Languages",
     "tools": "Tools"
+  },
+  "footer": {
+    "letsTalk": "Let's Talk!",
+    "location": "Tigre - Buenos Aires, Argentina",
+    "thanks": "Thank you for visiting my portfolio.",
+    "tagline": "From your dreams to the digital world, we are just one click away.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Me",
+    "copyright": "All rights reserved"
   }
 }

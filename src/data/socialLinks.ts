@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons";
-import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDocker } from "react-icons/fa";
 
 export interface SocialLink {
   id: string;
@@ -22,9 +22,9 @@ export const socialLinks: SocialLink[] = [
     label: "GitHub",
   },
   {
-    id: "resume",
-    icon: FaFileDownload,
-    url: "https://drive.google.com/file/d/18Qy-SsRVgqNoW9Iob8rPgFB5nNVkDdb2/view?usp=sharing",
-    label: "Resume",
+    id: "docker",
+    icon: FaDocker,
+    url: "https://hub.docker.com/u/happykitten",
+    label: "Docker",
   },
 ];
